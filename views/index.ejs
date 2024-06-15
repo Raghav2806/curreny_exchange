@@ -1,97 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="main">
-            <h1>Currency Exchange</h1>
-    <form action="/" class="form" method="post">
-    <label for="base">Choose The Base Currency</label>
-    <select name="base">
-        <option value="AED">AED (UAE)</option>
-        <option value="AUD">AUD (Australia)</option>
-        <option value="BRL">BRL (Brazil)</option>
-        <option value="CAD">CAD (Canada)</option>
-        <option value="CNY">CNY (China)</option>
-        <option value="EUR">EUR (Europe)</option>
-        <option value="IDR">IDR (Indonesia)</option>
-        <option value="INR">INR (India)</option>
-        <option value="IRR">IRR (Iran)</option>
-        <option value="JPY">JPY (Japan)</option>
-        <option value="KWD">KWD (Kuwait)</option>
-        <option value="QAR">QAR (Qatar)</option>
-        <option value="RUB">RUB (Russia)</option>
-        <option value="USD">USD (USA)</option>
-        <option value="VND">VND (Vietnam)</option>
-    </select>
+      <div class="main">
+        <h1>Currency Exchange</h1>
+        <form action="/" class="form" method="post">
+          <label for="base">Choose The Base Currency</label>
+          <select name="base">
+            <option value="AED">AED (UAE)</option>
+            <option value="AUD">AUD (Australia)</option>
+            <option value="BRL">BRL (Brazil)</option>
+            <option value="CAD">CAD (Canada)</option>
+            <option value="CNY">CNY (China)</option>
+            <option value="EUR">EUR (Europe)</option>
+            <option value="IDR">IDR (Indonesia)</option>
+            <option value="INR">INR (India)</option>
+            <option value="IRR">IRR (Iran)</option>
+            <option value="JPY">JPY (Japan)</option>
+            <option value="KWD">KWD (Kuwait)</option>
+            <option value="QAR">QAR (Qatar)</option>
+            <option value="RUB">RUB (Russia)</option>
+            <option value="USD">USD (USA)</option>
+            <option value="VND">VND (Vietnam)</option>
+          </select>
 
-    <label for="target">Choose The Target Currency</label>
-    <select name="target">
-        <option value="AED">AED (UAE)</option>
-        <option value="AUD">AUD (Australia)</option>
-        <option value="BRL">BRL (Brazil)</option>
-        <option value="CAD">CAD (Canada)</option>
-        <option value="CNY">CNY (China)</option>
-        <option value="EUR">EUR (Europe)</option>
-        <option value="IDR">IDR (Indonesia)</option>
-        <option value="INR">INR (India)</option>
-        <option value="IRR">IRR (Iran)</option>
-        <option value="JPY">JPY (Japan)</option>
-        <option value="KWD">KWD (Kuwait)</option>
-        <option value="QAR">QAR (Qatar)</option>
-        <option value="RUB">RUB (Russia)</option>
-        <option value="USD">USD (USA)</option>
-        <option value="VND">VND (Vietnam)</option>
-    </select>
+          <label for="target">Choose The Target Currency</label>
+          <select name="target">
+            <option value="AED">AED (UAE)</option>
+            <option value="AUD">AUD (Australia)</option>
+            <option value="BRL">BRL (Brazil)</option>
+            <option value="CAD">CAD (Canada)</option>
+            <option value="CNY">CNY (China)</option>
+            <option value="EUR">EUR (Europe)</option>
+            <option value="IDR">IDR (Indonesia)</option>
+            <option value="INR">INR (India)</option>
+            <option value="IRR">IRR (Iran)</option>
+            <option value="JPY">JPY (Japan)</option>
+            <option value="KWD">KWD (Kuwait)</option>
+            <option value="QAR">QAR (Qatar)</option>
+            <option value="RUB">RUB (Russia)</option>
+            <option value="USD">USD (USA)</option>
+            <option value="VND">VND (Vietnam)</option>
+          </select>
 
-    <label for="amount">Amount:</label>
-    <input type="number" name="amount">
-    <button type="submit">Convert</button>
-    </form>
+          <label for="amount">Amount:</label>
+          <input type="number" name="amount" />
+          <button type="submit">Convert</button>
+        </form>
 
-    <% if(locals.primary && locals.secondary && locals.convert && locals.initial_prin && locals.final_prin) { %>
+        <% if(locals.primary && locals.secondary && locals.convert &&
+        locals.initial_prin && locals.final_prin) { %>
         <div class="grand">
-        <div class="parent">
+          <div class="parent">
             <div class="child">
-                <h2><%= primary %></h2>
-                <p>Base Currency</p>
+              <h2><%= primary %></h2>
+              <p>Base Currency</p>
             </div>
             <div class="child">
-                <h2><%= secondary %></h2>
-                <p>Target Currency</p>
+              <h2><%= secondary %></h2>
+              <p>Target Currency</p>
             </div>
             <div class="child">
-                <h2><%= convert %></h2>
-                <p>Conversion Rate</p>
+              <h2><%= convert %></h2>
+              <p>Conversion Rate</p>
             </div>
+          </div>
+          <div class="parent2">
+            <div class="child2">
+              <h2><%= initial_prin %></h2>
+              <p><%= primary %></p>
+            </div>
+            <div class="child2">
+              <h2>=</h2>
+            </div>
+            <div class="child2">
+              <h2><%= final_prin %></h2>
+              <p><%= secondary %></p>
+            </div>
+          </div>
         </div>
-        <div class="parent2">    
-            <div class="child2">
-                <h2><%= initial_prin %></h2>
-                <p><%= primary %></p>
-            </div>
-            <div class="child2">
-                <h2>=</h2>
-            </div>
-            <div class="child2">
-                <h2><%= final_prin %></h2>
-                <p><%= secondary %></p>
-            </div>
-        </div>
-    </div>
-    <% } %>
-    </div>
+        <% } %>
+      </div>
     </div>
     <footer>
-        <% const d = new Date(); %>
-        <% let year = d.getFullYear(); %>
-        <p>Copyright © <%= year %></p>
-      </footer>
-</body>
+      <% const d = new Date(); %> <% let year = d.getFullYear(); %>
+      <p>Copyright © <%= year %></p>
+    </footer>
+  </body>
 </html>
